@@ -7,7 +7,7 @@ final class Etudiant
 
     public function __construct()
     {
-        $json = file_get_contents('http://mvc_etudiant.com/Assets/json/etudiants.json');
+        $json = file_get_contents(__DIR__."/../Assets/json/etudiants.json");
         $this->json_students = json_decode($json, true);
     }
 
